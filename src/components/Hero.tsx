@@ -67,16 +67,7 @@ const Hero = () => {
               </a>
             </Button>
 
-            <Button
-              variant="outline"
-              className="group border-accent/50 hover:border-accent hover:bg-accent/10 transition-all duration-300"
-              asChild
-            >
-              <a href="https://ahmedmohamed03.vercel.app" target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Portfolio
-              </a>
-            </Button>
+           
           </motion.div>
 
           <motion.div

@@ -5,7 +5,7 @@ import { ExternalLink, Code } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import tawtreenDemo from "@/assets/tawteen-demo.mp4";
+
 
 const Projects = () => {
   const ref = useRef(null);
@@ -50,7 +50,6 @@ const Projects = () => {
       tech: ["Next.js", "Redux Toolkit", "React Query", "Strapi CMS"],
       category: "Web Platform",
       link: "https://tawteen.tech/",
-      video: tawtreenDemo
     }
   ];
 
@@ -78,19 +77,7 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-glow h-full flex flex-col">
-                {project.video && (
-                  <div className="mb-4 -mx-6 -mt-6 rounded-t-lg overflow-hidden">
-                    <video 
-                      autoPlay 
-                      loop 
-                      muted 
-                      playsInline
-                      className="w-full h-48 object-cover"
-                    >
-                      <source src={project.video} type="video/mp4" />
-                    </video>
-                  </div>
-                )}
+                
                 
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
