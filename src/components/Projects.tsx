@@ -15,13 +15,15 @@ const Projects = () => {
       title: "Vconnct Website",
       description: "Developed a high-performance website with scalable architecture. Integrated multi-payment gateways for seamless transactions and connected with Cal.com for meeting bookings.",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Cal.com"],
-      category: "Web Application"
+      category: "Web Application",
+      link: "https://vconnct.me/en/home"
     },
     {
       title: "Vconnct Dashboard",
       description: "Interactive dashboard for tracking meeting statuses, scheduling, analytics, and subscriptions. Implemented intuitive UI components with optimized real-time data performance.",
       tech: ["React.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
-      category: "Dashboard"
+      category: "Dashboard",
+      link: "https://dashboard.vconnct.me/"
     },
     {
       title: "Inmate Communication System",
@@ -45,7 +47,8 @@ const Projects = () => {
       title: "Tawteen Website",
       description: "Responsive investment platform utilizing Next.js for SSR and optimized SEO, integrated with Strapi CMS for scalable content management.",
       tech: ["Next.js", "Redux Toolkit", "React Query", "Strapi CMS"],
-      category: "Web Platform"
+      category: "Web Platform",
+      link: "https://tawteen.tech/"
     }
   ];
 
@@ -101,6 +104,24 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
+
+                {project.link && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full mt-auto group/btn"
+                  >
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="gap-2"
+                    >
+                      View Project
+                      <ExternalLink className="h-4 w-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </Button>
+                )}
               </Card>
             </motion.div>
           ))}
