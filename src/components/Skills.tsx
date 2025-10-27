@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
+import { title } from "process";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -9,33 +10,43 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Core Frontend Foundations",
       skills: [
-        "React.js", "Next.js", "TypeScript", "JavaScript",
-        "HTML5", "CSS3", "Tailwind CSS", "Material UI"
+        "JavaScript",
+        "HTML", "CSS", 
       ]
+    },
+    {
+      title: "Frameworks & Libraries",
+      skills: ["React.js", "Next.js"]
+    },
+    {
+      title: " Styling & UI Frameworks",
+      skills: ["Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap" , "Shadcn UI", "Radix UI"]
     },
     {
       title: "State Management",
       skills: ["Redux Toolkit", "Zustand", "React Query"]
     },
     {
-      title: "Backend & APIs",
-      skills: ["REST APIs", "GraphQL", "Supabase", "Strapi CMS"]
-    },
+      title: " Forms & Validation",
+      skills: [ "Formik", "Yup" , "Zod"]
+    }
+    ,
     {
-      title: "Real-time",
-      skills: ["WebRTC", "LiveKit", "Real-time Data"]
+      title:"Data Fetching & Real-Time Communication",
+      skills: ["Axios", "React Query", "WebSockets"]
     },
+  
     {
-      title: "Tools & Others",
-      skills: ["Git", "Responsive Design", "Performance Optimization", "SEO"]
+      title: " Type Safety & Development Tools"
+      , skills: ["TypeScript", "ESLint", "Git", "Gitlab", "GitHub" , "Vercel"]
     }
   ];
 
   return (
     <section className="py-20 px-4 relative" ref={ref}>
-      <div className="container mx-auto max-w-6xl">
+      <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}

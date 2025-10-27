@@ -33,7 +33,7 @@ const Experience = () => {
 
   return (
     <section className="py-20 px-4 relative" ref={ref}>
-      <div className="container mx-auto max-w-6xl">
+      <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
