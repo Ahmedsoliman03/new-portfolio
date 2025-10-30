@@ -15,11 +15,26 @@ const Experience = () => {
       title: "Frontend Developer",
       company: "Vconnct",
       location: "Giza, Egypt",
-      period: "01/2023 – Present",
+      period: "01/2024 – Present",
       description: [
         "Developed responsive and dynamic web pages and interactive dashboards, ensuring optimal performance, usability, and cross-device compatibility.",
-        "Gained hands-on experience with LiveKit and WebRTC to build real-time communication features similar to Zoom and Google Meet.",
-        "Integrated Supabase SDK and Strapi APIs with frontend projects for dynamic content rendering."
+        "Engineered real-time communication features using LiveKit and WebRTC to build real-time communication features similar to Zoom and Google Meet, including chat, raise hand, microphone, and video functionality.",
+        "Integrated Supabase for real-time data, authentication, and database management in web apps.",
+        "Integrated Strapi APIs with frontend projects for dynamic content rendering and efficient data handling."
+      ]
+    },
+    {
+      type: "work",
+      title: "Frontend Developer",
+      company: "Nauta L.L.C (Freelancing)",
+      location: "Germany (Remote)",
+      period: "02/2023 – 01/2024",
+      description: [
+        "Developed and maintained responsive web interfaces using React.js, Next.js, and Tailwind CSS to ensure high performance and accessibility across devices.",
+        "Collaborated with backend teams to integrate RESTful APIs and optimize data flow between frontend and backend systems.",
+        "Implemented reusable UI components and improved code structure for scalability and maintainability.",
+        "Focused on UI/UX enhancement, ensuring smooth user interaction and modern design alignment.",
+        "Optimized website performance through lazy loading, code splitting, and image optimization."
       ]
     }
   ];
