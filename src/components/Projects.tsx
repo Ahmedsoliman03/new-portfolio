@@ -13,6 +13,17 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Unify Storage",
+      description: `is a unified storage utility designed specifically for Next.js. 
+       It automatically saves data to both localStorage and cookies. This ensures data is available where needed (e.g., cookies for middleware/server-side rendering). It also provides a simple, intuitive interface for modern web applications.
+       Standard localStorage calls fail in Next.js Server Components because  window is not defined. This package checks the environment and safely
+        handles server-side execution (returning  null or skipping operations) instead of crashing.
+      `,
+      tech: ["TypeScript", "NPM", "Browser API", "Open Source"],
+      category: "NPM Package",
+      link: "https://www.npmjs.com/package/unify-storage"
+    },
+    {
       title: "Vconnct Website",
       description: "Developed a high-performance website with scalable architecture. Integrated multi-payment gateways for seamless transactions and connected with Cal.com for meeting bookings.",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "Cal.com"],
@@ -26,12 +37,12 @@ const Projects = () => {
       category: "Dashboard",
       link: "https://dashboard.vconnct.me/"
     },
-    {
-      title: "Inmate Communication System",
-      description: "Dual-dashboard system for Dubai Correctional Project enabling secure inmate-visitor communication with real-time updates via Supabase.",
-      tech: ["Next.js", "Material UI", "Tailwind CSS", "Supabase"],
-      category: "Enterprise System"
-    },
+    // {
+    //   title: "Inmate Communication System",
+    //   description: "Dual-dashboard system for Dubai Correctional Project enabling secure inmate-visitor communication with real-time updates via Supabase.",
+    //   tech: ["Next.js", "Material UI", "Tailwind CSS", "Supabase"],
+    //   category: "Enterprise System"
+    // },
     {
       title: "Admin Dashboard for Companies",
       description: "Modern admin panel with scalable architecture featuring data visualization, table filtering, and role-based UI features for enhanced usability.",
@@ -77,8 +88,8 @@ const Projects = () => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-glow h-full flex flex-col">
-                
-                
+
+
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                     <Code className="h-6 w-6 text-primary" />
