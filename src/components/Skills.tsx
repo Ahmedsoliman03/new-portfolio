@@ -40,7 +40,11 @@ const Skills = () => {
   
     {
       title: " Type Safety & Development Tools"
-      , skills: ["TypeScript", "ESLint", "Git", "Gitlab", "GitHub" , "Vercel"]
+      , skills: ["TypeScript", "Git", "Gitlab", "GitHub" ]
+    },
+    {
+      title: " Testing"
+      , skills: ["Jest", "React Testing Library"]
     }
   ];
 
