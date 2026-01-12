@@ -13,7 +13,7 @@ const Skills = () => {
       title: "Core Frontend Foundations",
       skills: [
         "JavaScript",
-        "HTML", "CSS", 
+        "HTML", "CSS",
       ]
     },
     {
@@ -22,29 +22,33 @@ const Skills = () => {
     },
     {
       title: " Styling & UI Frameworks",
-      skills: ["Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap" , "Shadcn UI", "Radix UI"]
+      skills: ["Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap", "Shadcn UI", "Radix UI"]
     },
     {
       title: "State Management",
-      skills: ["Redux Toolkit", "Zustand", "React Query"]
+      skills: ["Redux Toolkit", "Zustand", "Context API", "React Query"]
     },
     {
       title: " Forms & Validation",
-      skills: [ "Formik", "Yup" , "Zod"]
+      skills: ["Formik", "Yup", "Zod"]
     }
     ,
     {
-      title:"Data Fetching & Real-Time Communication",
-      skills: ["Axios", "React Query", "WebSockets"]
+      title: "Data Fetching & Real-Time Communication",
+      skills: ["Axios", "React Query", "WebSockets", "Socket.IO", "WebRTC", "LiveKit"]
     },
-  
+
     {
       title: " Type Safety & Development Tools"
-      , skills: ["TypeScript", "Git", "Gitlab", "GitHub" ]
+      , skills: ["TypeScript", "Git", "Gitlab", "GitHub"]
     },
     {
       title: " Testing"
       , skills: ["Jest", "React Testing Library"]
+    },
+    {
+      title: "Soft Skills & Methodologies",
+      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology"]
     }
   ];
 

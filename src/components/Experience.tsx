@@ -128,6 +128,38 @@ const Experience = () => {
               </div>
             </Card>
           </motion.div>
+
+          {/* Certifications */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 shadow-card hover:shadow-glow">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-4">Certifications</h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold">Front-End Development Certification (SCSS, Bootstrap, React, Redux)</p>
+                        <p className="text-sm text-muted-foreground">freeCodeCamp</p>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold">Frontend development diploma</p>
+                        <p className="text-sm text-muted-foreground">Route Academy (04/2021 – 10/2021)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

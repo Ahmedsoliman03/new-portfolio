@@ -30,19 +30,33 @@ const Projects = () => {
       category: "Web Application",
       link: "https://vconnct.me/en/home"
     },
-    {
-      title: "Vconnct Dashboard",
-      description: "Interactive dashboard for tracking meeting statuses, scheduling, analytics, and subscriptions. Implemented intuitive UI components with optimized real-time data performance.",
-      tech: ["React.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
-      category: "Dashboard",
-      link: "https://dashboard.vconnct.me/"
-    },
     // {
-    //   title: "Inmate Communication System",
-    //   description: "Dual-dashboard system for Dubai Correctional Project enabling secure inmate-visitor communication with real-time updates via Supabase.",
-    //   tech: ["Next.js", "Material UI", "Tailwind CSS", "Supabase"],
-    //   category: "Enterprise System"
+    //   title: "Vconnct Dashboard",
+    //   description: "Interactive dashboard for tracking meeting statuses, scheduling, analytics, and subscriptions. Implemented intuitive UI components with optimized real-time data performance.",
+    //   tech: ["React.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
+    //   category: "Dashboard",
+    //   link: "https://dashboard.vconnct.me/"
     // },
+    {
+      title: "Inmate Communication System",
+      description: "Dual-dashboard system for Dubai Correctional Project enabling secure inmate-visitor communication with real-time updates via Supabase.",
+      tech: ["Next.js", "Material UI", "Tailwind CSS", "Supabase"],
+      category: "Enterprise System"
+    },
+    {
+      title: "Vcloud Dashboard",
+      description: "Frontend for a cloud communication platform, managing high-volume data and real-time interactions.",
+      tech: ["Next.js", "TypeScript", "Redux Toolkit", "Node.js"],
+      category: "Dashboard",
+      link: "https://vcloud.vconnct.me"
+    },
+    {
+      title: "Developer Guide",
+      description: "Modern documentation platform built with Next.js, Fumadocs, and MDX for developer experience.",
+      tech: ["Next.js", "Fumadocs", "MDX", "TypeScript"],
+      category: "Documentation",
+      link: "https://guide.vconnct.com"
+    },
     {
       title: "Admin Dashboard for Companies",
       description: "Modern admin panel with scalable architecture featuring data visualization, table filtering, and role-based UI features for enhanced usability.",
@@ -54,13 +68,6 @@ const Projects = () => {
       description: "Interactive dashboard for managing orders, customers, and worker performance with real-time data visualization and earnings tracking.",
       tech: ["Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"],
       category: "Dashboard"
-    },
-    {
-      title: "Tawteen Website",
-      description: "Responsive investment platform utilizing Next.js for SSR and optimized SEO, integrated with Strapi CMS for scalable content management.",
-      tech: ["Next.js", "Redux Toolkit", "React Query", "Strapi CMS"],
-      category: "Web Platform",
-      link: "https://tawteen.tech/",
     }
   ];
 
