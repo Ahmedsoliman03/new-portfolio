@@ -145,7 +145,13 @@ const Experience = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-start">
                       <div>
-                        <p className="font-semibold">Front-End Development Certification (SCSS, Bootstrap, React, Redux)</p>
+                        <p className="font-semibold">Design Patterns</p>
+                        <p className="text-sm text-muted-foreground">LinkedIn Learning</p>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="font-semibold">Front-End Development Certification (Bootstrap, React, Redux)</p>
                         <p className="text-sm text-muted-foreground">freeCodeCamp</p>
                       </div>
                     </div>
