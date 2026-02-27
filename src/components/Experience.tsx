@@ -17,33 +17,32 @@ const Experience = () => {
       location: "Giza, Egypt",
       period: "01/2024 – Present",
       description: [
-        "Developed responsive and dynamic web pages and interactive dashboards, ensuring optimal performance, usability, and cross-device compatibility.",
-        "Engineered real-time communication features using LiveKit and WebRTC to build real-time communication features similar to Zoom and Google Meet, including chat, raise hand, microphone, and video functionality.",
-        "Integrated Supabase for real-time data, authentication, and database management in web apps.",
-        "Integrated Strapi APIs with frontend projects for dynamic content rendering and efficient data handling."
+        "Engineered scalable web applications and high-performance dashboards using Next.js and TypeScript, ensuring optimal cross-device compatibility.",
+        "Implemented real-time video, audio, and chat features using LiveKit and WebRTC, supporting concurrent sessions with optimized latency and scalable architecture.",
+        "Implemented Keycloak SSO in the web application, managing authentication state, token refresh, protected routes, and role-based UI rendering.",
+        "Optimized application performance and user experience by applying Optimistic UI patterns and modern state management with Redux Toolkit."
       ]
     },
     {
       type: "work",
       title: "Frontend Developer",
-      company: "Nauta L.L.C (Freelancing)",
+      company: "Nauta L.L.C (Part Time)",
       location: "Germany (Remote)",
       period: "02/2023 – 01/2024",
       description: [
-        "Developed and maintained responsive web interfaces using React.js, Next.js, and Tailwind CSS to ensure high performance and accessibility across devices.",
-        "Collaborated with backend teams to integrate RESTful APIs and optimize data flow between frontend and backend systems.",
-        "Implemented reusable UI components and improved code structure for scalability and maintainability.",
-        "Focused on UI/UX enhancement, ensuring smooth user interaction and modern design alignment.",
-        "Optimized website performance through lazy loading, code splitting, and image optimization."
+        "Developed responsive web interfaces for international clients using React.js and Tailwind CSS, adhering to high-quality European design standards.",
+        "Boosted website performance by implementing Lazy Loading, Code Splitting, and advanced image optimization techniques.",
+        "Built a reusable UI component library to enhance code maintainability and accelerate the development lifecycle.",
+        "Collaborated with backend teams to integrate RESTful APIs, ensuring efficient data flow and robust system architecture."
       ]
     }
   ];
 
   const education = {
-    degree: "Bachelor's degree in Computer Science",
+    degree: "Bachelor's Degree in Computer Science",
     institution: "Akhbar Elyoum Academy",
     location: "Giza, Egypt",
-    period: "2021 – 2025"
+    period: "2021 – 07/2025"
   };
 
   return (

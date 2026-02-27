@@ -15,6 +15,7 @@ node_modules
 dist
 dist-ssr
 *.local
+Ahmed-Mohamed-Resume.pdf
 
 # Editor directories and files
 .vscode/*

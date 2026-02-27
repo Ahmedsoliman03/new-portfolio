@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
-import { title } from "process";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -21,7 +20,7 @@ const Skills = () => {
       skills: ["React.js", "Next.js"]
     },
     {
-      title: " Styling & UI Frameworks",
+      title: "Styling & UI Frameworks",
       skills: ["Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap", "Shadcn UI", "Radix UI"]
     },
     {
@@ -29,26 +28,28 @@ const Skills = () => {
       skills: ["Redux Toolkit", "Zustand", "Context API", "React Query"]
     },
     {
-      title: " Forms & Validation",
+      title: "Forms & Validation",
       skills: ["Formik", "Yup", "Zod"]
-    }
-    ,
+    },
     {
       title: "Data Fetching & Real-Time Communication",
-      skills: ["Axios", "React Query", "WebSockets", "Socket.IO", "WebRTC", "LiveKit"]
-    },
-
-    {
-      title: " Type Safety & Development Tools"
-      , skills: ["TypeScript", "Git", "Gitlab", "GitHub"]
+      skills: ["Axios", "React Query", "REST", "GraphQL", "WebSockets", "Socket.IO", "WebRTC", "LiveKit"]
     },
     {
-      title: " Testing"
-      , skills: ["Jest", "React Testing Library"]
+      title: "Type Safety & Development Tools",
+      skills: ["TypeScript", "Git", "GitLab", "GitHub", "Keycloak"]
+    },
+    {
+      title: "Backend & CMS",
+      skills: ["Strapi", "Supabase"]
+    },
+    {
+      title: "Testing",
+      skills: ["Jest", "React Testing Library"]
     },
     {
       title: "Soft Skills & Methodologies",
-      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology"]
+      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology", "Continuous Learning", "Adaptability"]
     }
   ];
 

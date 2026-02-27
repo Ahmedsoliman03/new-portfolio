@@ -54,11 +54,12 @@ const About = () => {
         >
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Frontend Developer specializing in responsive web and dashboard design, ensuring seamless 
-              accessibility across all devices. Skilled in building high-performance dynamic projects with 
-              clean, maintainable code. Experienced in working with REST APIs and GraphQL APIs, with strong 
-              ability to integrate external tools, libraries, and CMS systems such as Strapi to deliver 
-              scalable and efficient solutions.
+              A results-driven Frontend Developer with over 2 years of professional experience in building
+              scalable web applications and high-performance dashboards. Graduating with a Bachelor's Degree
+              in Computer Science (2025). Expert in React.js, Next.js, and TypeScript, with a proven track
+              record in integrating real-time communication features using WebRTC and LiveKit. Proficient in
+              modern state management (Zustand, Redux), API integration (REST, GraphQL), and CMS systems like
+              Strapi. Passionate about writing clean, maintainable code and delivering seamless user experiences.
             </p>
           </Card>
         </motion.div>

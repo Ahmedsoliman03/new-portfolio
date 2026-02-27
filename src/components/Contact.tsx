@@ -72,7 +72,7 @@ const Contact = () => {
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-[15px]">
                     <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
                     {item.value}
                   </div>
