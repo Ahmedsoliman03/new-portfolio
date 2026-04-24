@@ -54,10 +54,10 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-primary bg-clip-text text-transparent">
             Experience & Education
           </h2>
-          <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="space-y-8">
@@ -145,19 +145,22 @@ const Experience = () => {
                     <div className="flex justify-between items-start">
                       <div>
                         <p className="font-semibold">Design Patterns</p>
-                        <p className="text-sm text-muted-foreground">LinkedIn Learning</p>
+                        <p className="text-sm text-muted-foreground">LinkedIn Learning — Jan 2026</p>
+                        <p className="text-sm text-muted-foreground mt-1">Mastered Generic Components for maximum code reusability across large-scale applications.</p>
                       </div>
                     </div>
                     <div className="flex justify-between items-start">
                       <div>
                         <p className="font-semibold">Front-End Development Certification (Bootstrap, React, Redux)</p>
                         <p className="text-sm text-muted-foreground">freeCodeCamp</p>
+                        <p className="text-sm text-muted-foreground mt-1">Practical experience in Bootstrap, jQuery, React, and Redux.</p>
                       </div>
                     </div>
                     <div className="flex justify-between items-start">
                       <div>
-                        <p className="font-semibold">Frontend development diploma</p>
-                        <p className="text-sm text-muted-foreground">Route Academy (04/2021 – 10/2021)</p>
+                        <p className="font-semibold">Frontend Development Diploma</p>
+                        <p className="text-sm text-muted-foreground">Route Academy — 04/2021 – 10/2021, Giza, Dokki</p>
+                        <p className="text-sm text-muted-foreground mt-1">Built responsive and interactive web applications with a focus on clean and maintainable code.</p>
                       </div>
                     </div>
                   </div>

@@ -10,46 +10,43 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Core Frontend Foundations",
-      skills: [
-        "JavaScript",
-        "HTML", "CSS",
-      ]
+      skills: ["HTML", "CSS", "JavaScript"]
     },
     {
-      title: "Frameworks & Libraries",
+      title: "Frontend Frameworks & Libraries",
       skills: ["React.js", "Next.js"]
     },
     {
       title: "Styling & UI Frameworks",
-      skills: ["Tailwind CSS", "Material UI", "Framer Motion", "Bootstrap", "Shadcn UI", "Radix UI"]
+      skills: ["Tailwind CSS", "Bootstrap", "Material UI (MUI)", "Shadcn UI", "Radix UI", "Optimistic UI"]
     },
     {
       title: "State Management",
-      skills: ["Redux Toolkit", "Zustand", "Context API", "React Query"]
+      skills: ["Context API", "Zustand", "Redux Toolkit"]
+    },
+    {
+      title: "Data Fetching & Real-Time",
+      skills: ["React Query", "Socket.IO", "LiveKit", "WebRTC"]
+    },
+    {
+      title: "Type Safety & Dev Tools",
+      skills: ["TypeScript", "Git", "GitLab", "GitHub", "Keycloak"]
     },
     {
       title: "Forms & Validation",
       skills: ["Formik", "Yup", "Zod"]
     },
     {
-      title: "Data Fetching & Real-Time Communication",
-      skills: ["Axios", "React Query", "REST", "GraphQL", "WebSockets", "Socket.IO", "WebRTC", "LiveKit"]
-    },
-    {
-      title: "Type Safety & Development Tools",
-      skills: ["TypeScript", "Git", "GitLab", "GitHub", "Keycloak"]
-    },
-    {
-      title: "Backend & CMS",
-      skills: ["Strapi", "Supabase"]
+      title: "Backend Basics",
+      skills: ["Node.js", "Express.js", "REST APIs", "Strapi", "Supabase"]
     },
     {
       title: "Testing",
       skills: ["Jest", "React Testing Library"]
     },
     {
-      title: "Soft Skills & Methodologies",
-      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology", "Continuous Learning", "Adaptability"]
+      title: "Soft Skills",
+      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology", "Continuous Learning", "Adaptability", "Time Management"]
     }
   ];
 
@@ -62,10 +59,10 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
             Skills & Technologies
           </h2>
-          <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

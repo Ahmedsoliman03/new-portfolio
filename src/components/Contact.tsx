@@ -45,10 +45,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-primary bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full mb-6" />
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I'm currently available for freelance work and full-time opportunities.
             Let's connect and discuss how we can work together!
@@ -93,7 +93,7 @@ const Contact = () => {
         >
           <Button
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 transition-opacity text-lg px-8 py-6 shadow-glow"
+            className="bg-primary hover:opacity-90 transition-opacity text-lg px-8 py-6 shadow-glow"
             asChild
           >
             <a href="mailto:ahmedmohamedali20003@gmail.com">

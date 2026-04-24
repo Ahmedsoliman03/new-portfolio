@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Linkedin, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThreeBackground from "@/components/ThreeBackground";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-glow opacity-30 blur-3xl animate-glow-pulse" />
-      
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      {/* Three.js 3D animated background */}
+      <ThreeBackground />
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,7 +22,7 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="mb-6"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-primary">
               Ahmed Mohamed
             </h1>
             <h2 className="text-2xl md:text-4xl font-semibold text-muted-foreground">
@@ -35,8 +36,8 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            Specializing in responsive web and dashboard design, building high-performance 
-            dynamic projects with clean, maintainable code.
+            2+ years building scalable web applications, high-performance dashboards, and
+            real-time communication systems — with React, Next.js &amp; TypeScript.
           </motion.p>
 
           <motion.div
@@ -47,7 +48,7 @@ const Hero = () => {
           >
             <Button
               variant="outline"
-              className="group border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+              className="transition-all duration-300"
               asChild
             >
               <a href="mailto:ahmedmohamedali20003@gmail.com">
@@ -55,19 +56,21 @@ const Hero = () => {
                 Contact Me
               </a>
             </Button>
-            
+
             <Button
               variant="outline"
-              className="group border-accent/50 hover:border-accent hover:bg-accent/10 transition-all duration-300"
+              // className="group border-accent/50 hover:border-accent hover:bg-accent/10 transition-all duration-300"
               asChild
             >
-              <a href="https://linkedin.com/in/ahmed-mohamed-5b319b277" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://linkedin.com/in/ahmed-mohamed-5b319b277"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 LinkedIn
               </a>
             </Button>
-
-           
           </motion.div>
 
           <motion.div
@@ -81,7 +84,7 @@ const Hero = () => {
               <span>Giza, Egypt</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="h-2 w-2 rounded-full bg-accent animate-glow-pulse" />
+              <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
               <span>Available for work</span>
             </div>
           </motion.div>
@@ -93,7 +96,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

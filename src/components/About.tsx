@@ -40,10 +40,10 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
             About Me
           </h2>
-          <div className="h-1 w-20 bg-gradient-primary mx-auto rounded-full" />
+          <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
 
         <motion.div
@@ -55,11 +55,13 @@ const About = () => {
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
             <p className="text-lg text-muted-foreground leading-relaxed">
               A results-driven Frontend Developer with over 2 years of professional experience in building
-              scalable web applications and high-performance dashboards. Graduating with a Bachelor's Degree
+              scalable web applications and high-performance dashboards. Graduated with a Bachelor's Degree
               in Computer Science (2025). Expert in React.js, Next.js, and TypeScript, with a proven track
               record in integrating real-time communication features using WebRTC and LiveKit. Proficient in
               modern state management (Zustand, Redux), API integration (REST, GraphQL), and CMS systems like
-              Strapi. Passionate about writing clean, maintainable code and delivering seamless user experiences.
+              Strapi. Familiar with backend fundamentals using Node.js and Express.js, including building
+              RESTful APIs and basic database integration. Passionate about writing clean, maintainable code
+              and delivering seamless user experiences.
             </p>
           </Card>
         </motion.div>
