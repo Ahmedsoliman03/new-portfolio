@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThreeBackground from "@/components/ThreeBackground";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Three.js 3D animated background */}
       <ThreeBackground />
 
@@ -23,10 +26,10 @@ const Hero = () => {
             className="mb-6"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-4 text-primary">
-              Ahmed Mohamed
+              {t("hero.title")}
             </h1>
             <h2 className="text-2xl md:text-4xl font-semibold text-muted-foreground">
-              Frontend Developer
+              {t("hero.subtitle")}
             </h2>
           </motion.div>
 
@@ -36,8 +39,7 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
           >
-            2+ years building scalable web applications, high-performance dashboards, and
-            real-time communication systems — with React, Next.js &amp; TypeScript.
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -53,7 +55,7 @@ const Hero = () => {
             >
               <a href="mailto:ahmedmohamedali20003@gmail.com">
                 <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Contact Me
+                {t("hero.contactMe")}
               </a>
             </Button>
 
@@ -68,7 +70,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <Linkedin className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                LinkedIn
+                {t("hero.linkedin")}
               </a>
             </Button>
           </motion.div>
@@ -81,11 +83,11 @@ const Hero = () => {
           >
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4 text-accent" />
-              <span>Giza, Egypt</span>
+              <span>{t("hero.location")}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-              <span>Available for work</span>
+              <span>{t("hero.status")}</span>
             </div>
           </motion.div>
         </motion.div>

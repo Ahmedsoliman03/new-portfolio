@@ -1,52 +1,62 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Briefcase, Calendar, GraduationCap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const Experience = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const experiences = [
     {
       type: "work",
-      title: "Frontend Developer",
-      company: "Vconnct",
-      location: "Giza, Egypt",
-      period: "01/2024 – Present",
-      description: [
-        "Engineered scalable web applications and high-performance dashboards using Next.js and TypeScript, ensuring optimal cross-device compatibility.",
-        "Implemented real-time video, audio, and chat features using LiveKit and WebRTC, supporting concurrent sessions with optimized latency and scalable architecture.",
-        "Implemented Keycloak SSO in the web application, managing authentication state, token refresh, protected routes, and role-based UI rendering.",
-        "Optimized application performance and user experience by applying Optimistic UI patterns and modern state management with Redux Toolkit."
-      ]
+      title: t("experience.vconnct.title"),
+      company: t("experience.vconnct.company"),
+      location: t("experience.vconnct.location"),
+      period: t("experience.vconnct.period"),
+      description: t("experience.vconnct.bullets", { returnObjects: true }) as string[] || []
     },
     {
       type: "work",
-      title: "Frontend Developer",
-      company: "Nauta L.L.C (Part Time)",
-      location: "Germany (Remote)",
-      period: "02/2023 – 01/2024",
-      description: [
-        "Developed responsive web interfaces for international clients using React.js and Tailwind CSS, adhering to high-quality European design standards.",
-        "Boosted website performance by implementing Lazy Loading, Code Splitting, and advanced image optimization techniques.",
-        "Built a reusable UI component library to enhance code maintainability and accelerate the development lifecycle.",
-        "Collaborated with backend teams to integrate RESTful APIs, ensuring efficient data flow and robust system architecture."
-      ]
+      title: t("experience.nauta.title"),
+      company: t("experience.nauta.company"),
+      location: t("experience.nauta.location"),
+      period: t("experience.nauta.period"),
+      description: t("experience.nauta.bullets", { returnObjects: true }) as string[] || []
     }
   ];
 
   const education = {
-    degree: "Bachelor's Degree in Computer Science",
-    institution: "Akhbar Elyoum Academy",
-    location: "Giza, Egypt",
-    period: "2021 – 07/2025"
+    degree: t("experience.education.degree"),
+    institution: t("experience.education.institution"),
+    location: t("experience.education.location"),
+    period: t("experience.education.period")
   };
 
+  const certifications = [
+    {
+      title: t("experience.certs.designPatterns.title"),
+      subtitle: t("experience.certs.designPatterns.subtitle"),
+      description: t("experience.certs.designPatterns.description")
+    },
+    {
+      title: t("experience.certs.fcc.title"),
+      subtitle: t("experience.certs.fcc.subtitle"),
+      description: t("experience.certs.fcc.description")
+    },
+    {
+      title: t("experience.certs.route.title"),
+      subtitle: t("experience.certs.route.subtitle"),
+      description: t("experience.certs.route.description")
+    }
+  ];
+
   return (
-    <section className="py-20 px-4 relative" ref={ref}>
+    <section id="experience" className="py-20 px-4 relative" ref={ref}>
       <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -55,7 +65,7 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-primary bg-clip-text text-transparent">
-            Experience & Education
+            {t("experience.title")}
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -87,7 +97,7 @@ const Experience = () => {
                     </div>
                     <p className="text-sm text-muted-foreground mb-4">{exp.location}</p>
                     <ul className="space-y-2">
-                      {exp.description.map((item, i) => (
+                      {Array.isArray(exp.description) && exp.description.map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-muted-foreground">
                           <span className="text-primary mt-1.5">▹</span>
                           <span>{item}</span>
@@ -140,29 +150,17 @@ const Experience = () => {
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-4">Certifications</h3>
+                  <h3 className="text-2xl font-bold mb-4">{t("experience.certificationsTitle")}</h3>
                   <div className="space-y-4">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <p className="font-semibold">Design Patterns</p>
-                        <p className="text-sm text-muted-foreground">LinkedIn Learning — Jan 2026</p>
-                        <p className="text-sm text-muted-foreground mt-1">Mastered Generic Components for maximum code reusability across large-scale applications.</p>
+                    {certifications.map((cert, index) => (
+                      <div key={index} className="flex justify-between items-start">
+                        <div>
+                          <p className="font-semibold">{cert.title}</p>
+                          <p className="text-sm text-muted-foreground">{cert.subtitle}</p>
+                          <p className="text-sm text-muted-foreground mt-1">{cert.description}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <p className="font-semibold">Front-End Development Certification (Bootstrap, React, Redux)</p>
-                        <p className="text-sm text-muted-foreground">freeCodeCamp</p>
-                        <p className="text-sm text-muted-foreground mt-1">Practical experience in Bootstrap, jQuery, React, and Redux.</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <p className="font-semibold">Frontend Development Diploma</p>
-                        <p className="text-sm text-muted-foreground">Route Academy — 04/2021 – 10/2021, Giza, Dokki</p>
-                        <p className="text-sm text-muted-foreground mt-1">Built responsive and interactive web applications with a focus on clean and maintainable code.</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>

@@ -1,38 +1,40 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Code2, Database, Palette, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const features = [
     {
       icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable and scalable code following best practices"
+      title: t("about.features.cleanCode.title"),
+      description: t("about.features.cleanCode.description")
     },
     {
       icon: Palette,
-      title: "Responsive Design",
-      description: "Creating seamless experiences across all devices"
+      title: t("about.features.responsive.title"),
+      description: t("about.features.responsive.description")
     },
     {
       icon: Database,
-      title: "API Integration",
-      description: "Expertise in REST APIs, GraphQL, and real-time data"
+      title: t("about.features.api.title"),
+      description: t("about.features.api.description")
     },
     {
       icon: Zap,
-      title: "Performance",
-      description: "Building high-performance, optimized applications"
+      title: t("about.features.performance.title"),
+      description: t("about.features.performance.description")
     }
   ];
 
   return (
-    <section className="py-20 px-4 relative" ref={ref}>
+    <section id="about" className="py-20 px-4 relative" ref={ref}>
       <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -41,7 +43,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            About Me
+            {t("about.title")}
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -54,14 +56,7 @@ const About = () => {
         >
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A results-driven Frontend Developer with over 2 years of professional experience in building
-              scalable web applications and high-performance dashboards. Graduated with a Bachelor's Degree
-              in Computer Science (2025). Expert in React.js, Next.js, and TypeScript, with a proven track
-              record in integrating real-time communication features using WebRTC and LiveKit. Proficient in
-              modern state management (Zustand, Redux), API integration (REST, GraphQL), and CMS systems like
-              Strapi. Familiar with backend fundamentals using Node.js and Express.js, including building
-              RESTful APIs and basic database integration. Passionate about writing clean, maintainable code
-              and delivering seamless user experiences.
+              {t("about.paragraph")}
             </p>
           </Card>
         </motion.div>

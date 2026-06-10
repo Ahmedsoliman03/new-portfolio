@@ -1,57 +1,63 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Card } from "@/components/ui/card";
 
 const Skills = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skillCategories = [
     {
-      title: "Core Frontend Foundations",
-      skills: ["HTML", "CSS", "JavaScript"]
+      title: t("skills.categories.foundations"),
+      skills: t("skills.items.foundations", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Frontend Frameworks & Libraries",
-      skills: ["React.js", "Next.js"]
+      title: t("skills.categories.frameworks"),
+      skills: t("skills.items.frameworks", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Styling & UI Frameworks",
-      skills: ["Tailwind CSS", "Bootstrap", "Material UI (MUI)", "Shadcn UI", "Radix UI", "Optimistic UI"]
+      title: t("skills.categories.styling"),
+      skills: t("skills.items.styling", { returnObjects: true }) as string[] || []
     },
     {
-      title: "State Management",
-      skills: ["Context API", "Zustand", "Redux Toolkit"]
+      title: t("skills.categories.state"),
+      skills: t("skills.items.state", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Data Fetching & Real-Time",
-      skills: ["React Query", "Socket.IO", "LiveKit", "WebRTC"]
+      title: t("skills.categories.data"),
+      skills: t("skills.items.data", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Type Safety & Dev Tools",
-      skills: ["TypeScript", "Git", "GitLab", "GitHub", "Keycloak"]
+      title: t("skills.categories.forms"),
+      skills: t("skills.items.forms", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Forms & Validation",
-      skills: ["Formik", "Yup", "Zod"]
+      title: t("skills.categories.tools"),
+      skills: t("skills.items.tools", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Backend Basics",
-      skills: ["Node.js", "Express.js", "REST APIs", "Strapi", "Supabase"]
+      title: t("skills.categories.testing"),
+      skills: t("skills.items.testing", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Testing",
-      skills: ["Jest", "React Testing Library"]
+      title: t("skills.categories.backend"),
+      skills: t("skills.items.backend", { returnObjects: true }) as string[] || []
     },
     {
-      title: "Soft Skills",
-      skills: ["Problem Solving", "Team Collaboration", "Agile Methodology", "Continuous Learning", "Adaptability", "Time Management"]
+      title: t("skills.categories.languages"),
+      skills: t("skills.items.languages", { returnObjects: true }) as string[] || []
+    },
+    {
+      title: t("skills.categories.soft"),
+      skills: t("skills.items.soft", { returnObjects: true }) as string[] || []
     }
   ];
 
   return (
-    <section className="py-20 px-4 relative" ref={ref}>
+    <section id="skills" className="py-20 px-4 relative" ref={ref}>
       <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -60,7 +66,7 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Skills & Technologies
+            {t("skills.title")}
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
         </motion.div>
@@ -78,7 +84,7 @@ const Skills = () => {
                   {category.title}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
+                  {Array.isArray(category.skills) && category.skills.map((skill) => (
                     <motion.span
                       key={skill}
                       whileHover={{ scale: 1.05 }}

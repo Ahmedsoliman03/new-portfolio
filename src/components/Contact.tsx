@@ -1,43 +1,45 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Linkedin, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const contactInfo = [
     {
       icon: Mail,
-      label: "Email",
+      label: t("contact.email"),
       value: "ahmedmohamedali20003@gmail.com",
       link: "mailto:ahmedmohamedali20003@gmail.com"
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: t("contact.phone"),
       value: "01159133110",
       link: "tel:01159133110"
     },
     {
       icon: MapPin,
-      label: "Location",
-      value: "Giza/6october, Egypt",
+      label: t("contact.location"),
+      value: t("contact.locationValue"),
       link: null
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
-      value: "Connect on LinkedIn",
+      label: t("contact.linkedin"),
+      value: t("contact.linkedinConnect"),
       link: "https://linkedin.com/in/ahmed-mohamed-5b319b277"
     }
   ];
 
   return (
-    <section className="pt-20 pb-5 px-4 relative" ref={ref}>
+    <section id="contact" className="pt-20 pb-5 px-4 relative" ref={ref}>
       <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -46,12 +48,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-primary bg-clip-text text-transparent">
-            Get In Touch
+            {t("contact.title")}
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm currently available for freelance work and full-time opportunities.
-            Let's connect and discuss how we can work together!
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -98,13 +99,11 @@ const Contact = () => {
           >
             <a href="mailto:ahmedmohamedali20003@gmail.com">
               <Mail className="mr-2 h-5 w-5" />
-              Send Me an Email
+              {t("contact.sendEmail")}
             </a>
           </Button>
         </motion.div>
       </div>
-
-
     </section>
   );
 };

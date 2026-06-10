@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
@@ -8,6 +9,7 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden overflow-y-hidden">
+      <Header />
       <Hero />
       <About />
       <Experience />
