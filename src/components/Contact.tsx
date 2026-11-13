@@ -21,8 +21,8 @@ const Contact = () => {
     {
       icon: Phone,
       label: t("contact.phone"),
-      value: "01159133110",
-      link: "tel:01159133110"
+      value: "+201159133110",
+      link: "tel:+201159133110"
     },
     {
       icon: MapPin,
@@ -39,7 +39,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="pt-20 pb-5 px-4 relative" ref={ref}>
+    <section id="contact" className="pt-20 pb-16 px-4 relative" ref={ref}>
       <div className="md:container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -65,20 +65,24 @@ const Contact = () => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
             >
               <Card
-                className={`p-4 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-glow ${item.link ? 'cursor-pointer' : ''
-                  }`}
-                onClick={() => item.link && window.open(item.link, item.link.startsWith('http') ? '_blank' : '_self')}
+                className={`p-5 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-glow ${
+                  item.link ? "cursor-pointer" : ""
+                }`}
+                onClick={() =>
+                  item.link &&
+                  window.open(item.link, item.link.startsWith("http") ? "_blank" : "_self")
+                }
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors shrink-0">
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex-1 text-[15px]">
-                    <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
-                    {item.value}
+                  <div className="flex-1 text-[15px] min-w-0">
+                    <p className="text-xs text-muted-foreground mb-1">{item.label}</p>
+                    <p className="font-medium text-foreground truncate">{item.value}</p>
                   </div>
                   {item.link && (
-                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <ExternalLink className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
                   )}
                 </div>
               </Card>

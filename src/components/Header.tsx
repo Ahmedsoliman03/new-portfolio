@@ -80,7 +80,7 @@ const Header = () => {
           }}
           className="text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform"
         >
-          {t("hero.title")}
+          {t("nav.logo")}
         </a>
 
         {/* Desktop Navigation */}

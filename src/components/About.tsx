@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Code2, Database, Palette, Zap } from "lucide-react";
+import { Code2, Radio, ShieldCheck, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
@@ -17,14 +17,14 @@ const About = () => {
       description: t("about.features.cleanCode.description")
     },
     {
-      icon: Palette,
-      title: t("about.features.responsive.title"),
-      description: t("about.features.responsive.description")
+      icon: Radio,
+      title: t("about.features.realtime.title"),
+      description: t("about.features.realtime.description")
     },
     {
-      icon: Database,
-      title: t("about.features.api.title"),
-      description: t("about.features.api.description")
+      icon: ShieldCheck,
+      title: t("about.features.authPayments.title"),
+      description: t("about.features.authPayments.description")
     },
     {
       icon: Zap,
@@ -72,7 +72,7 @@ const About = () => {
               <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-300 group hover:shadow-glow h-full">
                 <feature.icon className="h-12 w-12 mb-4 text-primary group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
               </Card>
             </motion.div>
           ))}
